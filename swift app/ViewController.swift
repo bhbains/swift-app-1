@@ -3,12 +3,12 @@
 //  swift app
 //
 //  Created by Brian on 12/1/16.
-//  Copyright © 2016 Edo. All rights reserved.  
+//  Copyright © 2016 Edo. All rights reserved.
 
 import UIKit
 
 class ViewController: UIViewController {
-
+  
   @IBOutlet var theLabe: UILabel!
   
   @IBOutlet var text1: UITextField!
@@ -17,28 +17,36 @@ class ViewController: UIViewController {
   
   @IBAction func buttonTapped(_ sender: Any) {
     
-    theLabe.text = "\(Double(text1.text!)! + Double(text2.text!)!)"
+    let addition = false
     
+    if addition {
+      
+      theLabe.text = "Anser: \(Double(text1.text!)! + Double(text2.text!)!)"
+      
+    } else {
+      
+      theLabe.text = "Anser: \(Double(text1.text!)! - Double(text2.text!)!)"
+      
+    }
     
-       }
-
-  override func viewDidLoad() {
+    func viewDidLoad() {
+      
+      super.viewDidLoad()
+      
+      // Do any additional setup after loading the view, typically from a nib.
+      
+      
+      
+      
+      
+      
+    }
     
-    super.viewDidLoad()
-    
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    
-    
+    func didReceiveMemoryWarning() {
+      super.didReceiveMemoryWarning()
+      // Dispose of any resources that can be recreated.
+    }
     
     
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-
 }
-
