@@ -3,8 +3,7 @@
 //  swift app
 //
 //  Created by Brian on 12/1/16.
-//  Copyright © 2016 Edo. All rights reserved.  Edo is a bitch fuck him
-//
+//  Copyright © 2016 Edo. All rights reserved.  
 
 import UIKit
 
@@ -12,39 +11,21 @@ class ViewController: UIViewController {
 
   @IBOutlet var theLabe: UILabel!
   
-  var tapCount = 0
+  @IBOutlet var text1: UITextField!
+  
+  @IBOutlet var text2: UITextField!
   
   @IBAction func buttonTapped(_ sender: Any) {
     
-    tapCount = tapCount + 1
+    theLabe.text = "\(Double(text1.text!)! + Double(text2.text!)!)"
     
-    if tapCount >= 5 {
-      
-      theLabe.text = "You tapped dat ass"
-    }
     
+       }
 
-    
-    
-    
-
-    
-    
-  }
-  
-  @IBAction func pressButton(_ sender: Any) {
-    
-    theLabe.text = "Buttons are cool"
-    
-    print("EDO")
-  
-  }
-  
-  
-  
-  
   override func viewDidLoad() {
+    
     super.viewDidLoad()
+    
     // Do any additional setup after loading the view, typically from a nib.
     
     
